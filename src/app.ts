@@ -25,8 +25,8 @@ app.get('/', (req: Request, res: Response) => {
 })
 app.use('/api', router)
 // 定義されていないルーティングは404をレスポンス
-app.use('*', (req: Request, res: Response) => {
-  res.status(404).send(`Not Found: ${req.baseUrl}`)
+app.all('*', (req: Request, res: Response) => {
+  res.status(404).send(`Not Found: ${req.method} ${req.originalUrl}`)
 })
 
 // エラーハンドリング
