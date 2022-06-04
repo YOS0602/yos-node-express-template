@@ -10,9 +10,9 @@ on:
   pull_request:
     branches: [main, develop]
 
-env:
-  # GitHub Secretsから環境変数として利用する値を読み込み
-  # HOGE: ${{secrets.HOGE}}
+# env:
+# GitHub Secretsから環境変数として利用する値を読み込み
+# HOGE: ${{secrets.HOGE}}
 
 jobs:
   build:
