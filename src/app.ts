@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express'
 import { router } from './routes/index.route'
+import { errorHandler } from './middlewares/error.middleware'
 
 // 環境変数の読み込み(for Local)
 import dotenv from 'dotenv'
@@ -27,6 +28,10 @@ app.use('/api', router)
 app.use('*', (req: Request, res: Response) => {
   res.status(404).send(`Not Found: ${req.baseUrl}`)
 })
+
+// エラーハンドリング
+// expressミドルウェア読み込みの中で、最後に`use`する必要がある
+app.use(errorHandler)
 
 // サーバのリッスン
 const port = process.env.PORT || '3000'
