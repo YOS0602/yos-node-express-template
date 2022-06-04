@@ -12,7 +12,6 @@ export const postContract = async (req: Request, res: Response, next: NextFuncti
     // other service call (or same service, different function can go here)
     // i.e. - await generateContractPreview()
     res.sendStatus(201)
-    next()
   } catch (e) {
     console.log('ERROR in Controllers: postContract')
     next(e)
