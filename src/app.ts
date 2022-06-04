@@ -31,6 +31,7 @@ app.use('*', (req: Request, res: Response) => {
 
 // エラーハンドリング
 // expressミドルウェア読み込みの中で、最後に`use`する必要がある
+// See: https://expressjs.com/ja/guide/error-handling.html
 app.use(errorHandler)
 
 // サーバのリッスン

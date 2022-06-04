@@ -38,6 +38,7 @@ export class CustomError implements Error {
   public apiErrorResponse(res: Response): void {
     console.error({
       name: this.name,
+      status: this.status,
       code: this.code,
       message: this.message,
       stack: this.stack,

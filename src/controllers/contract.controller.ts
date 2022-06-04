@@ -14,7 +14,7 @@ export const postContract = async (req: Request, res: Response, next: NextFuncti
     res.sendStatus(201)
     next()
   } catch (e) {
-    console.error(e)
-    res.sendStatus(500) && next(e)
+    console.log('ERROR in Controllers: postContract')
+    next(e)
   }
 }

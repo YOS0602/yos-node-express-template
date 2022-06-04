@@ -1,4 +1,5 @@
 import { insertContractDb } from '../db/contract.db'
+import { DatabaseError } from '../middlewares/errorClasses/database.error'
 
 /*
  * if you need to make calls to additional tables, data stores (Redis, for example),
@@ -8,7 +9,8 @@ export const createContract = async (/* contract, content */) => {
   try {
     return await insertContractDb(/* contract, content */)
   } catch (e) {
+    console.log('ERROR in Services: createContract')
     console.error(e)
-    throw new Error()
+    throw new DatabaseError({ code: '111', message: 'DatabaseError', status: 500 })
   }
 }
