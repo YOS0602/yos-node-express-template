@@ -5,6 +5,8 @@
   - [`.vscode/settings.json`の作成](#vscodesettingsjsonの作成)
   - [必須となる VSCode 拡張機能](#必須となる-vscode-拡張機能)
 - [構築にあたり参考にしたサイト](#構築にあたり参考にしたサイト)
+  - [ツール導入](#ツール導入)
+  - [フォルダ構成](#フォルダ構成)
 
 # 環境構築手順
 
@@ -74,5 +76,12 @@ code コマンドを解釈できない旨のエラーが出たら、PATH が通�
 
 # 構築にあたり参考にしたサイト
 
+## ツール導入
+
 - [express の開発に TypeScript を利用する](https://qiita.com/zaburo/items/69726cc42ef774990279)
 - [Node.js + ESLint + Prettier + TypeScript の初期設定](https://zenn.dev/fjsh/articles/19c5e794a63869)
+
+## フォルダ構成
+
+- [Project structure for an Express REST API when there is no "standard way"](https://www.coreycleary.me/project-structure-for-an-express-rest-api-when-there-is-no-standard-way)
+- [A better project structure with Express and Node.Js](https://medium.com/codechef-vit/a-better-project-structure-with-express-and-node-js-c23abc2d736f)
