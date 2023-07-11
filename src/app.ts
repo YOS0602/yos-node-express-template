@@ -1,10 +1,9 @@
-import express, { Request, Response } from 'express'
-import { router } from './routes/index.route'
-import { errorHandler } from './middlewares/error.middleware'
-
 // 環境変数の読み込み(for Local)
 import dotenv from 'dotenv'
 dotenv.config()
+import express, { Request, Response } from 'express'
+import { router } from './routes/index.route'
+import { errorHandler } from './middlewares/error.middleware'
 
 // Expressアプリケーションの設定
 const app: express.Express = express()
@@ -34,9 +33,4 @@ app.all('*', (req: Request, res: Response) => {
 // See: https://expressjs.com/ja/guide/error-handling.html
 app.use(errorHandler)
 
-// サーバのリッスン
-const port = process.env.PORT || '3000'
-
-app.listen(port, () => {
-  console.log(`Node.js app listening on port ${port}. Or Access http://localhost:${port}`)
-})
+export { app }
