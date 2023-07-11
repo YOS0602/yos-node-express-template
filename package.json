@@ -1,6 +1,6 @@
 {
   "name": "yos-node-express-template",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "node.js express template",
   "scripts": {
     "dev": "ts-node-dev --respawn src/app.ts",
@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/YOS0602/yos-node-express-template.git"
   },
-  "author": "",
+  "author": "YOS0602 <yoshitaka.t.biz@gmail.com> (https://github.com/YOS0602)",
   "license": "",
   "bugs": {
     "url": "https://github.com/YOS0602/yos-node-express-template/issues"
