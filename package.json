@@ -3,6 +3,7 @@
   "version": "1.0.2",
   "description": "node.js express template",
   "scripts": {
+    "start": "node dist/server.js",
     "dev": "ts-node-dev --respawn src/app.ts",
     "prebuild": "node -e 'fs.rmSync(`dist`, {recursive:true, force:true})'",
     "build": "tsc --project tsconfig.build.json",
