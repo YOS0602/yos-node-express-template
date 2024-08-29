@@ -10,8 +10,9 @@
       "request": "launch",
       "runtimeArgs": ["run-script", "dev"],
       "runtimeExecutable": "npm",
-      "skipFiles": ["<node_internals>/**"],
-      "type": "node"
+      "skipFiles": ["<node_internals>/**", "**/node_modules/**"],
+      "type": "node",
+      "preLaunchTask": "debugger setup"
     }
   ]
 }

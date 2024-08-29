@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "debugger setup",
+      "dependsOrder": "sequence",
+      "dependsOn": ["build"] // デバッガ起動時に実行させたいタスクをここに追加していくことができる
+    },
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build"],
+      "problemMatcher": []
+    }
+  ]
+}
